@@ -22,6 +22,7 @@ namespace SimpleService
             services.AddSingleton<IApplicationHealthService, ApplicationHealthService>();
             services.AddSingleton<IServerHealthService, ServerHealthService>();
             services.AddSingleton<IDatabaseHealthService, DatabaseHealthService>();
+            services.AddSingleton<IMachineInfo, MachineInfo>();
 
             services.AddSingleton(Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
